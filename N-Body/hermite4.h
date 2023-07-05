@@ -132,7 +132,7 @@ void calc_force(
 		double ax=0, ay=0, az=0;
 		double jx=0, jy=0, jz=0;
 		double pot=0;
-		for(int j=0; j<nj; j++){
+		for(int j=0; j<nj; j++){		
 			double dx = jpred[j].pos.x - ipred[i].pos.x;
 			double dy = jpred[j].pos.y - ipred[i].pos.y;
 			double dz = jpred[j].pos.z - ipred[i].pos.z;
