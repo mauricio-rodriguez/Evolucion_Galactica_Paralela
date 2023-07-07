@@ -567,7 +567,6 @@ int main(int argc, char *argv[]){
 		double t3;
 		calc_force(ni, nj, eps2, ipred, jpred, force_tmp, t3, t_isend, t_recv);
 		double t4 = wtime();
-		MPI_Allreduce(force_tmp, force, ni*Force::nword, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 		double t5 = wtime();
 
 #pragma omp parallel for
