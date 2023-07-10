@@ -128,7 +128,6 @@ def calcular_eficiencia():
     
     num_procesos = [1, 2, 4, 8, 16, 32, 64]
     for i in range(len(datos[N.get()])):
-        print(datos[N.get()][i])
         if datos[N.get()][i] < 0.7:
             escalabilidad_var.set(f"Es escalable hasta {num_procesos[i-1]} procesos")
             break
@@ -136,7 +135,7 @@ def calcular_eficiencia():
 # Crear la ventana del HMI
 ventana = tk.Tk()
 ventana.title("Simulación N-Body")
-ventana.geometry("400x400")
+ventana.geometry("500x400")
 
 # Crear un Frame para el N
 N_frame = tk.LabelFrame(ventana, text="Selecciona el N", width=120, height=250)
@@ -179,7 +178,7 @@ boton_graficar = tk.Button(ventana, text="Gráfica", command=mostrar_grafica)
 boton_graficar.place(relx=0.66, rely=0.9) 
 
 # Crear un Frame para los resultados
-resultados_frame = tk.LabelFrame(ventana, text="Procesos y escalabilidad")
+resultados_frame = tk.LabelFrame(ventana, text="Eficiencia por proceso de menor a mayor")
 resultados_frame.pack(side=tk.LEFT, padx=10, pady=10)
 
 # Variables para los resultados
@@ -216,8 +215,5 @@ resultado_64_procesos.pack()
 escalabilidad = tk.Label(resultados_frame, textvariable=escalabilidad_var)
 escalabilidad.pack()
 
-
-
-
+# Iniciar la ventana
 ventana.mainloop()
-
