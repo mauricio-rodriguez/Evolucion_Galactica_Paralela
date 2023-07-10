@@ -118,13 +118,13 @@ def modificar_N(newValue):
 def calcular_eficiencia():
     carpeta = "./Clean"
     datos = read_files(carpeta, "eficiencia")
-    resultado_1_proceso_var.set(datos[N.get()][0])
-    resultado_2_procesos_var.set(datos[N.get()][1])
-    resultado_4_procesos_var.set(datos[N.get()][2])
-    resultado_8_procesos_var.set(datos[N.get()][3])
-    resultado_16_procesos_var.set(datos[N.get()][4])
-    resultado_32_procesos_var.set(datos[N.get()][5])
-    resultado_64_procesos_var.set(datos[N.get()][6])
+    resultado_1_proceso_var.set("1 Proceso: " + str(datos[N.get()][0]))
+    resultado_2_procesos_var.set("2 Procesos: " + str(datos[N.get()][1]))
+    resultado_4_procesos_var.set("4 Procesos: " + str(datos[N.get()][2]))
+    resultado_8_procesos_var.set("8 Procesos: " + str(datos[N.get()][3]))
+    resultado_16_procesos_var.set("16 Procesos: " + str(datos[N.get()][4]))
+    resultado_32_procesos_var.set("32 Procesos: " + str(datos[N.get()][5]))
+    resultado_64_procesos_var.set("64 Procesos: " + str(datos[N.get()][6]))
     
     num_procesos = [1, 2, 4, 8, 16, 32, 64]
     for i in range(len(datos[N.get()])):
@@ -178,17 +178,17 @@ boton_graficar = tk.Button(ventana, text="Gráfica", command=mostrar_grafica)
 boton_graficar.place(relx=0.66, rely=0.9) 
 
 # Crear un Frame para los resultados
-resultados_frame = tk.LabelFrame(ventana, text="Eficiencia por proceso de menor a mayor")
+resultados_frame = tk.LabelFrame(ventana, text="Eficiencia por cantidad de procesos")
 resultados_frame.pack(side=tk.LEFT, padx=10, pady=10)
 
 # Variables para los resultados
-resultado_1_proceso_var = tk.IntVar()
-resultado_2_procesos_var = tk.IntVar()
-resultado_4_procesos_var = tk.IntVar()
-resultado_8_procesos_var = tk.IntVar()
-resultado_16_procesos_var = tk.IntVar()
-resultado_32_procesos_var = tk.IntVar()
-resultado_64_procesos_var = tk.IntVar()
+resultado_1_proceso_var = tk.StringVar()
+resultado_2_procesos_var = tk.StringVar()
+resultado_4_procesos_var = tk.StringVar()
+resultado_8_procesos_var = tk.StringVar()
+resultado_16_procesos_var = tk.StringVar()
+resultado_32_procesos_var = tk.StringVar()
+resultado_64_procesos_var = tk.StringVar()
 escalabilidad_var = tk.StringVar()
 
 resultado_1_proceso = tk.Label(resultados_frame, textvariable=resultado_1_proceso_var)
