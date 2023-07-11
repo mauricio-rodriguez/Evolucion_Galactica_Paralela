@@ -1,6 +1,6 @@
 # Evolucion_Galactica_Paralela
 
-[Link Overleaf](https://www.overleaf.com/9284392586hypdznkwnfhp)
+[Link Overleaf](https://es.overleaf.com/project/649a1619c03aebf95910d6bb)
 
 ## Secuencia de pasos para ejecutar en Khipu
 1. Git clone repository
